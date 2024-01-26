@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/pc-another-user" method="POST" class="ticket_form">
+                <div class="user_form">
+                    <div class="text_field">
+                        <span>Machine Name</span>
+                        <input type="text" name="pc_name" id="text_box">
+                    </div>
+                    <div class="drop_down_field">
+                        <span>Department</span>
+                        <select name="dept" id="drop_box">
+                            <option value="Receiving">Receiving</option>
+                            <option value="Pick">Pick</option>
+                            <option value="Shipping">Shipping</option>
+                            <option value="Changeovers">Changeovers</option>
+                            <option value="Photos">Photos</option>
+                        </select>
+                    </div>
+                    <div class="drop_down_field">
+                        <span>How often does this issue occur?</span>
+                        <select name="frequency" id="drop_box">
+                            <option value="First time">First time</option>
+                            <option value="Multiple times a day">Multiple times a day</option>
+                            <option value="Every few days">Every few days</option>
+                            <option value="Once a week">Once a week</option>
+                            <option value="Once a month">Once a month</option>
+                        </select>
+                    </div>
+                    <div class="text_field">
+                        <span>Subject Line</span>
+                        <input type="text" name="subject" id="text_box">
+                    </div>
+                    <div class="body_field">
+                        <span>*Detailed Description*</span>
+                        <textarea  cols="30" rows="10" name="desc" id="body_box" placeholder='"Detailed" problem description (more than "stuck at prompt")'></textarea>
+                    </div>
+                    <div class="submit_field">
+                        <span>Submit</span>
+                        <input type="submit" id="submit" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            const submit = document.querySelector(".submit_field")
+            const submit_button = document.querySelector("#submit")
+            submit.addEventListener("click", e => {
+                submit_button.click()
+            })
+        </script>
+        <script type="text/javascript" src="../static/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/printer-issues" method="POST" class="ticket_form">
+                <div class="user_form">
+                    <div class="drop_down_field">
+                        <span>Department</span>
+                        <select name="dept" id="drop_box">
+                            <option value="Receiving">Receiving</option>
+                            <option value="Pick">Pick</option>
+                            <option value="Shipping">Shipping</option>
+                            <option value="Changeovers">Changeovers</option>
+                            <option value="Photos">Photos</option>
+                        </select>
+                    </div>
+                    <div class="text_field">
+                        <span>Printer name</span>
+                        <input type="text" name="printer_name" placeholder="Label on printer/name of printer on pc." id="text_box">
+                    </div>
+                    <div class="drop_down_field">
+                        <span>What type of issue is your printer having?</span>
+                        <select name="printer_issue" id="printer_box">
+                            <option value="Jamming">Jamming</option>
+                            <option value="Out of toner">Out of toner</option>
+                            <option value="Printing incorrectly">Printing incorrectly</option>
+                            <option value="Not printing">Not printing</option>
+                            <option value="Wont turn on">Wont turn on</option>
+                            <option value="Broken label holder">Broken label holder</option>
+                            <option value="Won't connect to computer">Won't connect to computer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="body_field">
+                        <textarea  cols="15" rows="5" name="desc" id="body_box" placeholder='What issue are you experiencing?'></textarea>
+                    </div>
+                    <div class="submit_field">
+                        <span>Submit</span>
+                        <input type="submit" id="submit" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            const submit = document.querySelector(".submit_field")
+            const submit_button = document.querySelector("#submit")
+            submit.addEventListener("click", e => {
+                submit_button.click()
+            })
+        </script>
+        <script type="text/javascript" src="../static/printer_issues.js"></script>
+    </body>
+</html>  

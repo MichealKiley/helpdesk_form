@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/thanks" method="POST" class="ticket_form">
+                <div class="thanks">
+                    <p>Thanks for submiting a ticket, we'll get back to you shortly regarding your issue!</p>
+                    <div class="submit_field">
+                        <span>Back</span>
+                        <input type="submit" id="submit" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            const submit = document.querySelector(".submit_field")
+            const submit_button = document.querySelector("#submit")
+            submit.addEventListener("click", e => {
+                submit_button.click()
+            })
+        </script>
+        <script type="text/javascript" src="../static/index.js"></script>
+    </body>
+</html>

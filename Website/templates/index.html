@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/" enctype="multipart/form-data" class="ticket_form" method="POST">
+                <div class="issue_type">
+                    <span>What type of issue are you experiencing?</span>
+                    <div class="computer_button">
+                        <span>Computer</span>
+                        <input type="submit" name="issue_type" id="computer_button" value="computer" hidden>
+                    </div>
+                    <div class="printer_button">
+                        <span>Printer</span>
+                        <input type="submit" name="issue_type" id="printer_button" value="printer" hidden>
+                    </div>
+                    <div class="other_button">
+                        <span>Other</span>
+                        <input type="submit" name="issue_type" id="other_button" value="other" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+    <script type="text/javascript" src="../static/index.js"></script>
+    </body>
+</html>

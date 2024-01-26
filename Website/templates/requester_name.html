@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/requester_name" method="POST" class="ticket_form">
+                <div class="user_name">
+                    <span>Affected User's Name</span>
+                    <div class="text_field">
+                        <input type="text" name="name" id="text_box">
+                    </div>
+                    <div class="submit_field">
+                        <span>Submit</span>
+                        <input type="submit" id="submit" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript">
+            const submit = document.querySelector(".submit_field")
+            const submit_button = document.querySelector("#submit")
+            submit.addEventListener("click", e => {
+                submit_button.click()
+            })
+        </script>
+        <script type="text/javascript" src="../static/index.js"></script>
+    </body>
+</html>

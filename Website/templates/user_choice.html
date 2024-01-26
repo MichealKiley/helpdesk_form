@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Neuco Helpdesk</title>
+        <link rel="stylesheet" href="../static/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/user-type" enctype="multipart/form-data" class="ticket_form" method="POST">
+                <div class="another_user">
+                    <span>Are you submitting a ticket for another user?</span>
+                    <div class="yes_button">
+                        <span>Yes</span>
+                        <input type="submit" name="user_type" id="y_button" value="yes" hidden>
+                    </div>
+                    <div class="no_button">
+                        <span>No</span>
+                        <input type="submit" name="user_type" id="n_button" value="no" hidden>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+    <script type="text/javascript" src="../static/user_choice.js"></script>
+    </body>
+</html>
